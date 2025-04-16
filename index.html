@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>G07HN's Portfoilio</title>
+    <style>
+        body {
+            font-family: "Special Gothic Expanded One", sans-serif;
+            text-align: center;
+            padding: 1rem;
+            color: #E0E0E0;
+            background-color: #1e1e1e;
+        }
+
+        .special-gothic-expanded-one-regular {
+            font-family: "Special Gothic Expanded One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.25rem;
+            margin-top: 1rem;
+        }
+
+        .custom-button {
+            position: relative;
+            height: 300px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            background-color: #292929;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .custom-button:hover {
+            transform: scale(1.05);
+        }
+
+        .button-overlay {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 8px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+        .content-wrapper {
+
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .top-bar {
+            background-color: #292929;
+            color: #E0E0E0;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            /* Vertically centers the items */
+            justify-content: space-between;
+            /* Spaces out the items */
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+        }
+
+        .top-bar h1 {
+            margin: 0;
+            font-size: 2rem;
+            flex-grow: 1;
+            text-align: left;
+        }
+
+        .discord-link {
+            width: 48px;
+            height: auto;
+            margin-left: 10px;
+            display: block;
+        }
+
+        .youtube-link {
+            width: 38px;
+            height: auto;
+            margin-left: 10px;
+            display: block;
+            /* Ensures the image is treated as a block-level element */
+        }
+
+        .top-bar a {
+            display: flex;
+            align-items: center;
+            /* Vertically centers the content inside the link */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content-wrapper">
+        <div class="top-bar">
+            <h1>G07HN</h1>
+            <a href="https://www.youtube.com/@g07hn" target="_blank">
+                <img src="https://cdn.iconscout.com/icon/free/png-512/free-youtube-icon-download-in-svg-png-gif-file-formats--logo-social-media-icons-color-pack-logos-432560.png"
+                    alt="youtube-link" class="youtube-link">
+            </a>
+            <a href="https://discord.com/users/1159703345976586330" target="_blank">
+                <img src="https://pngimg.com/uploads/discord/discord_PNG3.png" alt="discord-link" class="discord-link">
+            </a>
+        </div>
+
+        <div class="button-container" id="buttonContainer"></div>
+    </div>
+
+
+    <script>
+        fetch('CustomButtons.json')
+            .then(response => {
+                if (!response.ok) throw new Error('Could not load CustomButtons.json');
+                return response.json();
+            })
+            .then(buttons => {
+                const container = document.getElementById("buttonContainer");
+                container.innerHTML = "";
+
+                buttons.forEach((btn) => {
+                    const button = document.createElement("button");
+                    button.className = "custom-button";
+                    button.style.backgroundImage = `url('${btn.texture}')`;
+
+                    const overlay = document.createElement("div");
+                    overlay.className = "button-overlay";
+
+                    button.appendChild(overlay);
+                    container.appendChild(button);
+                });
+            })
+            .catch(error => {
+                console.error('Error loading buttons:', error);
+                const container = document.getElementById("buttonContainer");
+                container.innerHTML = "<p style='color:red;'>Failed to load buttons. Make sure CustomButtons.json is present.</p>";
+            });
+    </script>
+</body>
+
+</html>
