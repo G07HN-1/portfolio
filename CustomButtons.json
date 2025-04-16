@@ -1,16 +1,16 @@
 [
-    { "texture": "textures/settings.jpg" },
-    { "texture": "textures/quit.png" },
-    { "texture": "textures/settings.jpg" },
-    { "texture": "textures/quit.png" },
+    { "texture": "textures/fortune.png" },
+    { "texture": "textures/fortune2.png" },
+    { "texture": "textures/fortune3.png" },
+    { "texture": "textures/fortune4.png" },
 
-    { "texture": "textures/settings.jpg" },
-    { "texture": "textures/quit.png" },
-    { "texture": "textures/settings.jpg" },
-    { "texture": "textures/quit.png" },
+    { "texture": "textures/rng.png" },
+    { "texture": "textures/rng2.png" },
+    { "texture": "textures/rng3.png" },
+    { "texture": "textures/hooked.png" },
 
-    { "texture": "textures/settings.jpg" },
-    { "texture": "textures/quit.png" },
-    { "texture": "textures/settings.jpg" },
-    { "texture": "textures/quit.png" }
+    { "texture": "textures/exigo.png" },
+    { "texture": "textures/mcc.png" },
+    { "texture": "textures/horizon.png" },
+    { "texture": "textures/dynamic.png" }
 ]
