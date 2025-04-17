@@ -166,6 +166,10 @@
             color: inherit;
             text-decoration: none;
         }
+
+        #horizontal-stack {
+            display: flex;
+        }
     </style>
 </head>
 
@@ -175,13 +179,16 @@
             <a href="https://www.g07hn.com/rickroll.mp4">
                 <h1>G07HN</h1>
             </a>
-            <a href="https://www.youtube.com/@g07hn" target="_blank">
-                <img src="https://cdn.iconscout.com/icon/free/png-512/free-youtube-icon-download-in-svg-png-gif-file-formats--logo-social-media-icons-color-pack-logos-432560.png"
-                    alt="youtube-link" class="youtube-link">
-            </a>
-            <a href="https://discord.com/users/1159703345976586330" target="_blank">
-                <img src="https://pngimg.com/uploads/discord/discord_PNG3.png" alt="discord-link" class="discord-link">
-            </a>
+            <div id="horizontal-stack">
+                <a href="https://www.youtube.com/@g07hn" target="_blank">
+                    <img src="https://cdn.iconscout.com/icon/free/png-512/free-youtube-icon-download-in-svg-png-gif-file-formats--logo-social-media-icons-color-pack-logos-432560.png"
+                        alt="youtube-link" class="youtube-link">
+                </a>
+                <a href="https://discord.com/users/1159703345976586330" target="_blank">
+                    <img src="https://pngimg.com/uploads/discord/discord_PNG3.png" alt="discord-link"
+                        class="discord-link">
+                </a>
+            </div>
         </div>
 
         <div class="button-container" id="buttonContainer"></div>
