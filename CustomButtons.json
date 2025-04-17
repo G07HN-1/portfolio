@@ -1,16 +1,16 @@
 [
-    { "texture": "textures/fortune.png" },
-    { "texture": "textures/fortune2.png" },
-    { "texture": "textures/fortune3.png" },
-    { "texture": "textures/fortune4.png" },
+    { "texture": "textures/fortune.webp" },
+    { "texture": "textures/fortune2.webp" },
+    { "texture": "textures/fortune3.webp" },
+    { "texture": "textures/fortune4.webp" },
 
-    { "texture": "textures/rng.png" },
-    { "texture": "textures/rng2.png" },
-    { "texture": "textures/rng3.png" },
-    { "texture": "textures/hooked.png" },
+    { "texture": "textures/rng.webp" },
+    { "texture": "textures/rng2.webp" },
+    { "texture": "textures/rng3.webp" },
+    { "texture": "textures/hooked.webp" },
 
-    { "texture": "textures/exigo.png" },
-    { "texture": "textures/mcc.png" },
-    { "texture": "textures/horizon.png" },
-    { "texture": "textures/dynamic.png" }
+    { "texture": "textures/exigo.webp" },
+    { "texture": "textures/mcc.webp" },
+    { "texture": "textures/horizon.webp" },
+    { "texture": "textures/dynamic.webp" }
 ]
