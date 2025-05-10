@@ -3,11 +3,13 @@
     { "texture": "textures/fortune2.webp" },
     { "texture": "textures/fortune3.webp" },
     { "texture": "textures/fortune4.webp" },
+    { "texture": "textures/interaction_menu.webp" },
 
     { "texture": "textures/rng.webp" },
     { "texture": "textures/rng2.webp" },
     { "texture": "textures/rng3.webp" },
     { "texture": "textures/hooked.webp" },
+    { "texture": "textures/friends_menu.webp" },
 
     { "texture": "textures/exigo.webp" },
     { "texture": "textures/mcc.webp" },
